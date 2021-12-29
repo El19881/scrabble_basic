@@ -1,0 +1,20 @@
+{% extends "layout.html" %} 
+
+{% block content %}
+
+<p>Lista graczy oraz ich punkty:</p>
+
+<p>{% for player, value in player_dict.items() %}</p>
+    <p> {{player}} ma {{value}} pkt. <input name={{player}} type='TEXT'>  </p>
+</p>{% endfor %}</p>
+
+<p><input value="Skoncz runde i dodaj punkty" type="SUBMIT"></p> 
+
+<p><input value="Zakoncz gre" type="SUBMIT"></p>
+
+
+
+{% endblock %}
+
+
+<!--Dodaj do loopa logike by to byl form i za kazdym razem mozna wpisywac dane, i po przeladowaniu beda dodawane do slownika jako value kazdego key-->

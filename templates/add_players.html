@@ -1,0 +1,19 @@
+{% extends "layout.html" %} 
+
+{% block content %}
+
+<p>Witaj w programie do podliczania punktow w grze Scrabble!</p>
+
+<form action="/points" method="POST">
+<p>Podaj ponizej dane graczy:</p>
+<table>
+    <tr><td>Gracz 1:</td><td><input name="player_input_1" type='TEXT'></td></tr>
+    <tr><td>Gracz 2:</td><td><input name="player_input_2" type='TEXT'></td></tr>
+    <tr><td>Gracz 3:</td><td><input name="player_input_3" type='TEXT'></td></tr>
+    <tr><td>Gracz 4:</td><td><input name="player_input_4" type='TEXT'></td></tr>
+</table>
+
+<p><input value="Potwierdz liste graczy" type="SUBMIT"></p>
+</form>
+
+{% endblock %}

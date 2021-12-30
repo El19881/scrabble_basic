@@ -5,7 +5,8 @@ This is the first rough version of this web-app, created for training purposes.
 
 Additional features will be added as this is still WIP. 
 
-Requiers:
+Requirements:
 
 Python - 3.9.5
+
 Flask - 2.0.2

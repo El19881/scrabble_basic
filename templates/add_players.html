@@ -2,18 +2,26 @@
 
 {% block content %}
 
-<p>Witaj w programie do podliczania punktow w grze Scrabble!</p>
+<h1> Welcome to the basic Scrabble points calculator! </h1>
 
 <form action="/points" method="POST">
-<p>Podaj ponizej dane graczy:</p>
-<table>
-    <tr><td>Gracz 1:</td><td><input name="player_input_1" type='TEXT'></td></tr>
-    <tr><td>Gracz 2:</td><td><input name="player_input_2" type='TEXT'></td></tr>
-    <tr><td>Gracz 3:</td><td><input name="player_input_3" type='TEXT'></td></tr>
-    <tr><td>Gracz 4:</td><td><input name="player_input_4" type='TEXT'></td></tr>
-</table>
 
-<p><input value="Potwierdz liste graczy" type="SUBMIT"></p>
+    <h2>Please add below the players:</h2>
+    <table>
+        <tr><td><strong>Player 1:</strong> </td><td><input name="player_input_1" type='TEXT' required placeholder="Add player name here"></td></tr>
+        <tr><td><strong>Player 2:</strong> </td><td><input name="player_input_2" type='TEXT' required placeholder="Add player name here"></td></tr>
+        <tr><td><strong>Player 3:</strong> </td><td><input name="player_input_3" type='TEXT' placeholder="Add player name here"></td></tr>
+        <tr><td><strong>Player 4:</strong> </td><td><input name="player_input_4" type='TEXT' placeholder="Add player name here"></td></tr>
+    </table>
+<br>
+
+    <button>Confirm the players and start the game!</button>
 </form>
 
 {% endblock %}
+
+
+
+<!--How to make form fields:
+Be aligned (even one under the other)
+Have prepopulated background text :Add points from this round here" or something like this"-->

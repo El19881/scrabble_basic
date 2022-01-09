@@ -1,0 +1,38 @@
+{% extends "layout.html" %} 
+
+{% block content %}
+
+<h1>Game results</h1>
+
+<h3>1st Place:</h3>
+    <p>{{list_scores[0][1]}} has {{list_scores[0][0]}} points!</p>
+
+<br>
+
+<h3>2nd Place:</h3>
+    <p>{{list_scores[1][1]}} has {{list_scores[1][0]}} points!</p>
+
+<br>
+{% if player3[1] == "player3" %}
+<p></p>
+{% else %} 
+<p>3rd Place:</p>
+<p>{{list_scores[2][1]}} has {{list_scores[2][0]}} points!</p>
+{% endif %}
+
+<br>
+{% if player4[1] == "player4" %}
+<p></p>
+{% else %} 
+<p>4th Place:</p>
+<p>{{list_scores[3][1]}} has {{list_scores[3][0]}} points!</p>
+{% endif %}
+
+<br>
+
+<h3>Rounds played in this game: {{rounds}}</h3> 
+
+{% endblock %}
+
+
+<!--Maybe change if rules to not show anything if no player 3 or 4-->

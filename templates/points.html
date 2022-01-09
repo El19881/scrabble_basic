@@ -2,19 +2,40 @@
 
 {% block content %}
 
-<p>Lista graczy oraz ich punkty:</p>
+<h1>Players and their points so far:</h1>
 
-<p>{% for player, value in player_dict.items() %}</p>
-    <p> {{player}} ma {{value}} pkt. <input name={{player}} type='TEXT'>  </p>
-</p>{% endfor %}</p>
+<form action="/points" method="POST">
 
-<p><input value="Skoncz runde i dodaj punkty" type="SUBMIT"></p> 
+    <p> {{player1[1]}} has {{player1[0]}} points. <input name="points1" type='number' required placeholder="Add points here"> </p> 
+    
+    <p> {{player2[1]}} has {{player2[0]}} points. <input name="points2" type='number' required placeholder="Add points here"> </p> 
+   
+    {% if player3[1] == "player3" %}
+     
+    <p>No player 3 in this game.</p>
+    {% else %}
+    <p> {{player3[1]}} has {{player4[0]}} points. <input name="points3" type='number' required placeholder="Add points here"> </p>
+    {% endif %}
 
-<p><input value="Zakoncz gre" type="SUBMIT"></p>
+    {% if player4[1] == "player4" %}
+     
+    <p>No player 4 in this game.</p>
+    {% else %}
+    <p> {{player4[1]}} has {{player4[0]}} points. <input name="points4" type='number' required placeholder="Add points here"> </p>
+    {% endif %}
 
-
+  
+    <button> Add points to players and end the round.</button>
+    
+</form>
+<br>
+<form action="/end_game" method="POST">
+    <button>End Game and show final results</button>
+</form>
 
 {% endblock %}
 
-
+<!--Dodac <form> miedzy for loop a submit do skonczenia rundy, tak, zeby program wiedzial ze klik na skoncz
+    runde powinien brac wartosci z forma i cos z nimi zrobic.  Jaka powinna byc logika zeby kazdy form input byl 
+dodawany jako value do kazdego key w dict-->
 <!--Dodaj do loopa logike by to byl form i za kazdym razem mozna wpisywac dane, i po przeladowaniu beda dodawane do slownika jako value kazdego key-->

@@ -3,8 +3,7 @@ player2 = [0,"player2"]
 player3 = [0,"player3"]
 player4 = [0,"player4"]
 
-
-roundssss = []
+roundssss = 0
 
 list_scores = []
 
